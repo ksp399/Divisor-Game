@@ -1,0 +1,21 @@
+#CODE
+
+class Solution:
+    def divisorGame(self, N: int) -> bool:
+        if N%2==0:
+            return True
+
+'''
+EXPLANTION:
+
+1. If Alice will lose for N, then Alice will must win for N+1, since Alice can first just make N decrease 1.
+2. For any odd number N, it only has odd factor, so after the first move, it will be an even number
+let's check the inference
+fisrt N = 1, Alice lose. then Alice will must win for 2.
+if N = 3, since all even number(2) smaller than 3 will leads Alice win, so Alice will lose for 3
+3 lose -> 4 win
+all even number(2,4) smaller than 5 will leads Alice win, so Alice will lose for 5
+...
+
+Therefore, Alice will always win for even number, lose for odd number.
+'''
